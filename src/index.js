@@ -16,7 +16,7 @@ exports.min = function min (array) {
 exports.max = function max (array) {
   let maxNum = array[0];
   for (let i = 0; i < array.length; i++){
-    if (maxNum < array[i]) maxNum = array[i];
+    if (maxNum > array[i]) maxNum = array[i];
   }
   if (array.length === 0){
     return 0;
@@ -37,7 +37,7 @@ exports.avg = function avg (array) {
     return 0;
   }else 
   {
-    avgNum /= array.length
+    avgNum /= array.length;
     return avgNum;
   }
 }
