@@ -4,11 +4,11 @@ exports.min = function min (array) {
   for (let i = 0; i < array.length; i++){
     if (minNum < array[i]) minNum = array[i];
   }
-  if (array.length !== 0){
-    return minNum;
+  if (array.length === 0){
+    return 0;
   }else 
   {
-    return 0;
+    return minNum;
   }
   
 }
