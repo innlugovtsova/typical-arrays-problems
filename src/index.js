@@ -1,9 +1,10 @@
 
 exports.min = function min (array) {
   var minNum = array[0];
-  for (let i = 0; i < array.length; i++){
-    if (minNum < array[i])   minNum = array[i];
+  for (var i = 0; i < array.length; i++){
+    if (minNum > array[i])   minNum = array[i];
   }
+
   if (array.length === 0){
     return 0;
   }else 
@@ -15,9 +16,10 @@ exports.min = function min (array) {
 
 exports.max = function max (array) {
   var maxNum = array[0];
-  for (let i = 0; i < array.length; i++){
-    if (maxNum > array[i])  maxNum = array[i];
+  for (var i = 0; i < array.length; i++){
+    if (maxNum < array[i])  maxNum = array[i];
   }
+
   if (array.length === 0){
     return 0;
   }else 
@@ -29,7 +31,7 @@ exports.max = function max (array) {
 
 exports.avg = function avg (array) {
   var avgNum = array[0];
-  for (let i = 1; i < array.length; i++){
+  for (var i = 1; i < array.length; i++){
     avgNum += array[i];
   }
   
